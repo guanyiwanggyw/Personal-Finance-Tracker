@@ -36,7 +36,6 @@ DEBUG = env("DEBUG")
 
 ALLOWED_HOSTS =  env.list("ALLOWED_HOSTS", default=["localhost", "127.0.0.1"])
 
-
 # Application definition
 
 INSTALLED_APPS = [
@@ -50,6 +49,7 @@ INSTALLED_APPS = [
     'corsheaders',
     'accounts',
     'transactions',
+    'integrations',
 ]
 
 MIDDLEWARE = [
