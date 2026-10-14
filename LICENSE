@@ -1,0 +1,41 @@
+# Terms of Use
+
+This is open-source, self-hosted software provided for personal,
+non-commercial use. By running it you agree to the following.
+
+**No warranty**
+The software is provided "as is", without warranty of any kind. I make no
+guarantees that it is accurate, complete, secure, or fit for any purpose.
+Balances, categories and insights it shows may contain errors, so check
+them against your bank's own records.
+
+**Not financial advice**
+Nothing in this software is financial, investment, tax or legal advice.
+You are responsible for your own financial decisions.
+
+**Your responsibility**
+You run this software on your own systems, so you are responsible for
+securing your machine, database, API credentials and encryption keys, and
+for complying with the terms of the services you connect to it.
+
+**Third-party services**
+Connecting to Monzo, Trading 212, Enable Banking, or any bank is subject
+to that provider's own terms, usage limits and privacy policy. Use of
+their APIs for this project is personal and non-commercial. I am not
+affiliated with or endorsed by any of these companies.
+
+**Limitation of liability**
+To the fullest extent permitted by law, I am not liable for any loss or
+damage arising from the use of this software, including loss of data,
+incorrect figures, unauthorised access to your accounts, or financial
+loss.
+
+**Licence**
+This software is released under the [MIT licence](LICENSE).
+
+**Changes**
+These terms may change as the project develops. The current version is
+always the one in this repository.
+
+**Contact**
+https://github.com/guanyiwanggyw/Personal-Finance-Tracker/issues
