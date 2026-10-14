@@ -44,12 +44,14 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
+    'corsheaders',
     'accounts',
     'transactions',
 ]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -138,3 +140,19 @@ MAILERS = {
         'BACKEND': 'django.core.mail.backends.console.EmailBackend',
     },
 }
+
+CORS_ALLOWED_ORIGINS = [
+    "http://localhost:5173",
+]
+CORS_ALLOW_CREDENTIALS = True
+CSRF_TRUSTED_ORIGINS = [
+    "http://localhost:5173",
+]
+
+MONZO_CLIENT_ID = env("MONZO_CLIENT_ID", default="")
+MONZO_CLIENT_SECRET = env("MONZO_CLIENT_SECRET", default="")
+MONZO_REDIRECT_URI = env(
+    "MONZO_REDIRECT_URI",
+    default="http://localhost:8000/api/accounts/monzo/callback/",
+)
+FRONTEND_URL = env("FRONTEND_URL", default="http://localhost:5173")
