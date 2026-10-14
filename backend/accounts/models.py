@@ -1,7 +1,7 @@
 from django.conf import settings
 from django.db import models
 from django.utils import timezone
-from django_cryptography.fields import encrypt
+from .fields import EncryptedTextField
 
 
 class ProviderConnection(models.Model):
@@ -19,8 +19,8 @@ class ProviderConnection(models.Model):
         related_name="bank_connections",
     )
     provider = models.CharField(max_length=20, choices=Provider.choices)
-    access_token = encrypt(models.TextField(blank=True))
-    refresh_token = encrypt(models.TextField(blank=True))
+    access_token = EncryptedTextField(blank=True)
+    refresh_token = EncryptedTextField(blank=True)
     expires_at = models.DateTimeField(null=True, blank=True)
     status = models.CharField(
         max_length=20, choices=Status.choices, default=Status.CONNECTED
